@@ -1,4 +1,4 @@
-var myApp = angular.module("reddit", ['ui.router'])
+var myApp = angular.module("reddit", ['ui.router', 'templates'])
 
 // FACTORIES
 myApp.factory('posts', [function(){
@@ -68,12 +68,12 @@ myApp.config([
 		$stateProvider
 			.state('home', {
 				url: '/home',
-				templateUrl: '/home.html',
+				templateUrl: 'assets/home/_home.html',
 				controller: 'MainCtrl'
 			})
 			.state('posts', {
 				url: '/posts/{id}',
-				templateUrl: '/posts.html',
+				templateUrl: 'assets/posts/_posts.html',
 				controller: 'PostsCtrl'
 			});
 
